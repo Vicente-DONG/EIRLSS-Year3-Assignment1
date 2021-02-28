@@ -1,0 +1,15 @@
+CREATE TABLE Bookings(
+    bookingID INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+    vehicleID INT NOT NULL,
+    customerID INT NOT NULL,
+    bookingStartDate TIMESTAMP NOT NULL,
+    bookingEndDate TIMESTAMP NOT NULL,
+    bookingPrice DOUBLE NOT NULL,
+    satNavRequested BOOLEAN NOT NULL,
+    babySeatsRequested BOOLEAN NOT NULL,
+    wineCoolerRequested BOOLEAN NOT NULL,
+    bookingFinished BOOLEAN NOT NULL,
+    lateReturn BOOLEAN NOT NULL,
+    FOREIGN KEY (vehicleID) REFERENCES Vehicles(vehicleID),
+    FOREIGN KEY (customerID) REFERENCES Customers(customerID)
+)

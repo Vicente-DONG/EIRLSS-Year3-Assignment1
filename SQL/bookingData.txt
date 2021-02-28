@@ -1,0 +1,2 @@
+INSERT INTO Bookings (vehicleID, customerID, bookingStartDate, bookingEndDate, bookingPrice, satNavRequested, babySeatsRequested, wineCoolerRequested, bookingFinished, lateReturn)
+VALUES(2, 1, '2020-12-27 12:22:11.000', '2020-12-30 12:22:11.000', 165.00, true, true, false, true, false);

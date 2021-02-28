@@ -1,0 +1,10 @@
+CREATE TABLE Customers (
+	customerID INT NOT NULL PRIMARY KEY GENERATED ALWAYS AS IDENTITY (START WITH 1, INCREMENT BY 1),
+        customerUsername VARCHAR(255) NOT NULL UNIQUE,
+        customerPassword VARCHAR(255) NOT NULL,
+        customerFirstName VARCHAR(100) NOT NULL,
+        customerLastName VARCHAR(100) NOT NULL,
+        customerDOB DATE NOT NULL,
+        customerAddress VARCHAR (255) NOT NULL, 
+        blacklisted BOOLEAN NOT NULL DEFAULT false
+)
